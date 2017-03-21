@@ -21,4 +21,4 @@ https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
 More help: Each command has an attached manual explaining its usage and functionalities. It can be accessed by the command man, e.g., `` man ls ``
 
 ## Accessing spark in the cluster
-After entering with ssh, simply use `` spark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
+After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
