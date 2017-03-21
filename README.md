@@ -19,3 +19,6 @@ wget – downloads data from a web URL, e.g., wget http://bbc.com /home/li1gd
 and much more. See, e.g.:
 https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
 More help: Each command has an attached manual explaining its usage and functionalities. It can be accessed by the command man, e.g., `` man ls ``
+
+## Accessing spark in the cluster
+After entering with ssh, simply use `` spark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
