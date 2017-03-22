@@ -1,6 +1,6 @@
 # Pyspark tutorial
 First, we will access the cluster master node and HDFS via SSH.
-User accounts have been created for you to access the master. The username is your university username (e.g., li1gd) and your temporary password can be found here: https://docs.google.com/a/sheffield.ac.uk/spreadsheets/d/1kqx9CFG6u7mFGAna5E8Z- NUaFczaZSiFIl3RTsRwppM/edit?usp=sharing
+User accounts have been created for you to access the master.
 
 To use this account, you will need to install PuTTy from the Software Center.
 Then create a new SSH connection to the host bigdata1.sheffield.ac.uk using your username and password. After you have changed the password you will need to connect again using your new password.
@@ -22,3 +22,4 @@ More help: Each command has an attached manual explaining its usage and function
 
 ## Accessing spark in the cluster
 After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
+
