@@ -23,3 +23,6 @@ More help: Each command has an attached manual explaining its usage and function
 ## Accessing spark in the cluster
 After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
 
+## Submitting a batch job
+Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module).
+Or use http://www.hypexr.org/linux_scp_help.php and from your ssh shell run ``spark-submit filename.py``
