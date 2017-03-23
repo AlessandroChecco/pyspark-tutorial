@@ -1,4 +1,8 @@
 """Find all months in a given year and count the crimes.
+
+   This is useful when submitting a list of file names if
+   a regex expression will not get you all the files you want.
+
    run as spark-submit example.py
 """
 
@@ -17,6 +21,7 @@ def concat_all_dataframes(*args):
 place = 'west-yorkshire'
 year = '2016'
 
+# get a list of filenames that will be concatenated into a single frame
 # the format has the 0 character before single numbers. 
 # At the moment we don't have all months for 2016 in /data/ukpolice
 months = ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11')
