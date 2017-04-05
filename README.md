@@ -21,7 +21,7 @@ https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
 More help: Each command has an attached manual explaining its usage and functionalities. It can be accessed by the command man, e.g., `` man ls ``
 
 ## Accessing spark in the cluster
-After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1ac/filename``).
+After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1dt/filename``).
 
 ## Submitting a batch job
 Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module).
