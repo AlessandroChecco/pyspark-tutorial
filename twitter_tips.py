@@ -7,7 +7,6 @@ from pyspark.sql import SQLContext, DataFrame
 from pyspark.sql.functions import desc, mean
 
 sc = SparkContext()
-# sc = SparkContext("local", "pyspark")
 sqlContext = SQLContext(sc)
 
 df = sqlContext.read.json('/data/INF6032Coursework(willbebackintwodays)/statuses.log.2014-12-30.gz')
@@ -16,10 +15,10 @@ df = sqlContext.read.json('/data/INF6032Coursework(willbebackintwodays)/statuses
 df = df.na.drop(subset=["user.id"]).select(["user","entities", "lang", "retweeted", "favorited"])
 
 # view the contents of a column
-# print(df.select('lang').show())
+print(df.select('lang').show())
 
 # list the most common languages
-# print(df.groupby('lang').count().sort(desc('count')).show())
+print(df.groupby('lang').count().sort(desc('count')).show())
 
 # get a dataframe of the user data
 user_df = df.select('user.*')
