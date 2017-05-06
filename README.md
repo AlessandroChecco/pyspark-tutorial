@@ -26,3 +26,20 @@ After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS files
 ## Submitting a batch job
 Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module).
 Or use http://www.hypexr.org/linux_scp_help.php and from your ssh shell run ``spark-submit filename.py``
+
+# Workflow for the student project
+I suggest to prototype the script locally on your computer first on a small sample of the dataset. When the script is ready you can exectute it on the cluster.
+
+## Downloading files from HDFS
+Download the needed files (work only on few files locally) from http://bigdata1.sheffield.ac.uk:8888/filebrowser/
+
+## Install pyspark locally
+
+### On Mac
+https://gist.github.com/ololobus/4c221a0891775eaa86b0
+### On Windows
+https://ysinjab.com/2015/03/28/hello-spark/
+To use ipython with Spark try setting IPYTHON environment variable to 1 . For ipython notebook try setting IPYTHON_OPTS to :
+IPYTHON_OPTS=”notebook”
+### On Ubuntu
+https://medium.com/@GalarnykMichael/install-spark-on-ubuntu-pyspark-231c45677de0
