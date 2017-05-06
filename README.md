@@ -43,3 +43,6 @@ To use ipython with Spark try setting IPYTHON environment variable to 1 . For ip
 IPYTHON_OPTS=”notebook”
 ### On Ubuntu
 https://medium.com/@GalarnykMichael/install-spark-on-ubuntu-pyspark-231c45677de0
+
+## Speeding up the prototyping workflow
+use ``df = df.head(1000)`` to test the scripts only the first 1000 lines of the file.
