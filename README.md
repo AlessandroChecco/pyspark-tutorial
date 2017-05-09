@@ -45,4 +45,4 @@ IPYTHON_OPTS=”notebook”
 https://medium.com/@GalarnykMichael/install-spark-on-ubuntu-pyspark-231c45677de0
 
 ## Speeding up the prototyping workflow
-use ``df = df.head(1000)`` to test the scripts only the first 1000 lines of the file.
+use ``df = df.limit(1000)`` to test the scripts only the first 1000 lines of the file.
