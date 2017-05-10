@@ -54,6 +54,6 @@ out.to_csv('out.csv')
 ```
 
 ## Matching a hashtag
-Look up https://regex101.com/r/4HYf3E/2
+Look up https://regex101.com/r/4HYf3E/3
 use it with rlike command:
 ``` df2.filter(col('text').rlike("(?i)(#hi.*)")).show()```
