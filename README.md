@@ -52,3 +52,8 @@ use ``df = df.limit(1000)`` to test the scripts only the first 1000 lines of the
 out = df.toPandas() # it's a collect: careful with size
 out.to_csv('out.csv')
 ```
+
+## Matching a hashtag
+Look up https://regex101.com/r/4HYf3E/2
+use it with rlike command:
+``` df2.filter(col('text').rlike("(?i)(#hi.*)")).show()```
