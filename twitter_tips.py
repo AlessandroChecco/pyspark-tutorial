@@ -14,6 +14,9 @@ df = sqlContext.read.json('/data/INF6032Coursework/statuses.log.2014-12-30.gz')
 # clean df and select the columns are are interested in
 df = df.na.drop(subset=["user.id"]).select(["user","entities", "lang", "retweeted", "favorited"])
 
+# take only the first 5000 rows
+df = df.limit(5000)
+
 # view the contents of a column
 print(df.select('lang').show())
 
