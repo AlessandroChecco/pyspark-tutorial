@@ -24,8 +24,9 @@ More help: Each command has an attached manual explaining its usage and function
 After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1dt/filename``).
 
 ## Submitting a batch job
-Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module), following the video here: https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/create_action.mp4?raw=true
-Or use http://www.hypexr.org/linux_scp_help.php and from your ssh shell run ``spark-submit filename.py``
+Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module), following the video here: https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/create_action.mp4?raw=true. For fast prototyping (small dataset) you can run the batch on a single machine following the video here: https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/create_local.mp4?raw=true
+
+Alternatively use http://www.hypexr.org/linux_scp_help.php to copy your script on your home folder, and from your ssh shell run ``spark-submit filename.py``.
 
 ## Visualize logs
 To visualize the log of an action run with oozie, follow https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/view_logs.mp4?raw=true
