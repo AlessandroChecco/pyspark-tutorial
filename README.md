@@ -57,7 +57,7 @@ use ``df = df.limit(1000)`` to test the scripts only the first 1000 lines of the
 out = df.toPandas() # it's a collect: careful with size
 out.to_csv('out.csv')
 # this saves to the hdfs
-sqlContext.write.format('com.databricks.spark.csv').save("/user/username/outout.csv")
+df.coalesce(1).write.format('com.databricks.spark.csv').save("/user/username/outout.csv") # use coalesce only if the final file can fit in one node!
 ```
 
 ## Matching a hashtag
