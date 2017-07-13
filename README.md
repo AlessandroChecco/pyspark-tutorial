@@ -53,8 +53,11 @@ use ``df = df.limit(1000)`` to test the scripts only the first 1000 lines of the
 
 ## Saving to file
 ```
+# this saves to the workspace
 out = df.toPandas() # it's a collect: careful with size
 out.to_csv('out.csv')
+# this saves to the hdfs
+sqlContext.write.format('com.databricks.spark.csv').save("/user/username/outout.csv")
 ```
 
 ## Matching a hashtag
