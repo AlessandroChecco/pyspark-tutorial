@@ -23,14 +23,20 @@ More help: Each command has an attached manual explaining its usage and function
 After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1dt/filename``).
 
 ## Submitting a batch job
-from a console in a folder where the script is:
+from a console in a folder where the script is, copy your script:
+From linux and osx:
 ```
 scp script.py user@bigdata1.sheffield.ac.uk:~/.
+```
+From windows follow https://it.cornell.edu/managed-servers/transfer-files-using-putty to copy the file in the remote folder.
+
+Then execute the script remotely:
+```
 ssh user@bigdata1.sheffield.ac.uk
 nohup spark-submit script.py &
 exit
 ```
-the process will keep running in the background. From windows follow https://it.cornell.edu/managed-servers/transfer-files-using-putty to copy the file in the remote folder.
+the process will keep running in the background.
 
 ## Visualize logs
 To visualize the log:
