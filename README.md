@@ -28,9 +28,9 @@ From linux and osx:
 ```
 scp script.py user@bigdata1.sheffield.ac.uk:~/.
 ```
-From windows follow https://it.cornell.edu/managed-servers/transfer-files-using-putty to copy the file in the remote folder.
+From windows follow https://it.cornell.edu/managed-servers/transfer-files-using-putty to copy the file in the remote folder (or use http://bigdata1.sheffield.ac.uk:8888/filebrowser/ to upload your script on your hdfs folder and then use ``hdfs dfs -get /user/username/script.py`` to get the file after entering the ssh session).
 
-Then execute the script remotely:
+Then enter the ssh session and execute the script remotely:
 ```
 ssh user@bigdata1.sheffield.ac.uk
 nohup spark-submit script.py &
