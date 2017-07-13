@@ -9,7 +9,7 @@ from pyspark.sql.functions import desc, mean
 sc = SparkContext()
 sqlContext = SQLContext(sc)
 
-df = sqlContext.read.json('/data/INF6032Coursework/statuses.log.2014-12-30.gz')
+df = sqlContext.read.json('/data/INF6032Coursework/statuses.log.2014-12-30.gz') # you can use wildcards to load multiple files
 
 # clean df and select the columns are are interested in
 df = df.na.drop(subset=["user.id"]).select(["user","entities", "lang", "retweeted", "favorited"])
