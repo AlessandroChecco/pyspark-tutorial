@@ -4,7 +4,7 @@ User accounts have been created for you to access the master.
 
 To use this account, you will need to install PuTTy from the Software Center.
 Then create a new SSH connection to the host bigdata1.sheffield.ac.uk using your username and password. After you have changed the password you will need to connect again using your new password.
-Basic SSH commands
+Basic bash commands
 ```
 pwd - tells you your current location in the local filesystem, e.g., /home/li1gd
 mkdir - allows you to create a new directory, e.g., mkdir myfolder
@@ -15,7 +15,6 @@ unzip – decompresses zip files, e.g., unzip file.zip
 df –h – shows you the local disk usage
 wget – downloads data from a web URL, e.g., wget http://bbc.com /home/li1gd
 ```
-
 and much more. See, e.g.:
 https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
 More help: Each command has an attached manual explaining its usage and functionalities. It can be accessed by the command man, e.g., `` man ls ``
@@ -24,12 +23,22 @@ More help: Each command has an attached manual explaining its usage and function
 After entering with ssh, simply use `` pyspark `` to run pyspark. The HDFS filesystem is accessible transparently (e.g. ``/user/li1dt/filename``).
 
 ## Submitting a batch job
-Go to http://bigdata1.sheffield.ac.uk:8888/oozie/editor/workflow/new/ and submit your local py files (and any additional module), following the video here: https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/create_action.mp4?raw=true. For fast prototyping (small dataset) you can run the batch on a single machine following the video here: https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/create_local.mp4?raw=true
-
-Alternatively use http://www.hypexr.org/linux_scp_help.php to copy your script on your home folder, and from your ssh shell run ``spark-submit --master local[*] filename.py`` for small datasets and ``spark-submit filename.py`` to run on the whole cluster.
+from a console in a folder where the script is:
+```
+scp script.py user@bigdata1.sheffield.ac.uk:~/.
+ssh user@bigdata1.sheffield.ac.uk
+nohup spark-submit script.py &
+exit
+```
+the process will keep running in the background. From windows follow https://it.cornell.edu/managed-servers/transfer-files-using-putty to copy the file in the remote folder.
 
 ## Visualize logs
-To visualize the log of an action run with oozie, follow https://github.com/AlessandroChecco/pyspark-tutorial/blob/master/view_logs.mp4?raw=true
+To visualize the log:
+```
+ssh user@bigdata1.sheffield.ac.uk
+less nohup.out #or tailf for real time (CTRL+C to exit)
+```
+and `` q `` to exit.
 
 # Workflow for the student project
 I suggest to prototype the script locally on your computer first on a small sample of the dataset. When the script is ready you can exectute it on the cluster.
