@@ -46,11 +46,11 @@ less nohup.out #or tailf for real time (CTRL+C to exit)
 ```
 and `` q `` to exit.
 
-# Workflow for the student project
+# Workflow for the coursework
 I suggest to prototype the script locally on your computer first on a small sample of the dataset. When the script is ready you can exectute it on the cluster.
 
 ## Downloading files from HDFS
-Download the needed files (work only on few files locally) from http://bigdata1.sheffield.ac.uk:8888/filebrowser/
+Download the needed files (work only on few files locally) from http://bigdata1.sheffield.ac.uk:8888/filebrowser/ or from [here](https://drive.google.com/open?id=0B1ER4vgdNOvmdTZuSlIxUzBvWHM) if the cluster is down.
 
 ## Install pyspark locally
 
@@ -79,3 +79,6 @@ df.coalesce(1).write.format('com.databricks.spark.csv').save("/user/username/res
 Look up https://regex101.com/r/4HYf3E/3
 use it with rlike command:
 ``` df2.filter(col('text').rlike("(?i)(#hi.*)")).show()```
+
+## If the cluster is down
+Download the data [here](https://drive.google.com/open?id=0B1ER4vgdNOvmdTZuSlIxUzBvWHM) and see [here](#workflow-for-the-coursework) to work locally.
