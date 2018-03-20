@@ -1,3 +1,5 @@
+See presentation [here](http://ampcamp.berkeley.edu/wp-content/uploads/2014/02/Strata-Intro-to-Spark.pptx)
+
 # Pyspark tutorial
 First, we will access the cluster master node and HDFS via SSH.
 User accounts have been created for you to access the master.
